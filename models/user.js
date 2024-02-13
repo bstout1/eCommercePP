@@ -55,7 +55,7 @@ module.exports = class UserModel {
             const statement = `SELECT *
                                 FROM users
                                 WHERE id = $1`;
-            const values [id];
+            const values = [id];
             const result = await db.query(statement, values);
 
             if (result.rows?.length) {
